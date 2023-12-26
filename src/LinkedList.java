@@ -39,12 +39,37 @@ public class LinkedList {
         }
     }
 
-     public void removeHead(){
-        if(head == null){
+    public void removeHead() {
+        if (head == null) {
             return;
         }
 
         head = head.next;
+    }
+
+    public void removeTail() {
+        if (head == null) {
+            return;
+        }
+
+        Node current = this.head;
+        Node previous = null;
+        while (current.next != null) {
+            previous = current;
+            current = current.next;
+        }
+        previous.next = null;
+    }
+
+    public boolean search(int key){
+        Node current = this.head;
+        while (current!= null) {
+            if(current.value == key){
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
     }
 
     public void display() {
