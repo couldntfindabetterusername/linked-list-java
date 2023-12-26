@@ -21,9 +21,30 @@ public class LinkedList {
             while (current.next != null) {
                 current = current.next;
             }
-            
+
             current.next = nodeToBeAdded;
         }
+    }
+
+    public void insertBetween(int data1, int data2, int data) {
+        Node nodeToBeAdded = new Node(data);
+        Node current = this.head;
+
+        while (current.next != null) {
+            if (current.value == data1 && current.next.value == data2) {
+                nodeToBeAdded.next = current.next;
+                current.next = nodeToBeAdded;
+                break;
+            }
+        }
+    }
+
+     public void removeHead(){
+        if(head == null){
+            return;
+        }
+
+        head = head.next;
     }
 
     public void display() {
