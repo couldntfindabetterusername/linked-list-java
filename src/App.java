@@ -53,5 +53,28 @@ public class App {
 
         System.out.println("Displaying ordered linked list");
         orderedList.display();
+
+        Stack stack = new Stack();
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        stack.push(40);
+        stack.push(50);
+
+        System.out.println("Displaying stack: ");
+        stack.display();
+
+        stack.pop();
+        stack.pop();
+
+        System.out.println("Displaying stack after 2 pops: ");
+        stack.display();
+
+        System.out.println("Peek element of stack: " + stack.peek());
+
+        if (stack.isEmpty())
+            System.out.println("Stack is empty");
+        else
+            System.out.println("Stack is not empty");
     }
 }

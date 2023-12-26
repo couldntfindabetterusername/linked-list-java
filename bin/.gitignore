@@ -1,5 +1,7 @@
 App.class
 Node.class
 LinkedList.class
+OrderedLinkedList.class
+Stack.class
 
 .gitignore  
