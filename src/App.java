@@ -41,5 +41,17 @@ public class App {
         list.insertAfter(56, 100);
         System.out.println("Inserting 100 after 56");
         list.display();
+
+        list.remove(56);
+        System.out.println("After removing 56");
+        list.display();
+
+        OrderedLinkedList orderedList = new OrderedLinkedList();
+        orderedList.insert(25);
+        orderedList.insert(10);
+        orderedList.insert(30);
+
+        System.out.println("Displaying ordered linked list");
+        orderedList.display();
     }
 }

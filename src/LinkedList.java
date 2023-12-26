@@ -5,6 +5,10 @@ public class LinkedList {
         this.head = null;
     }
 
+    public void insert(int data){
+        this.insertAtTail(data);
+    }
+    
     public void insertAtHead(int data) {
         Node nodeToBeAdded = new Node(data);
         nodeToBeAdded.next = this.head;
@@ -72,15 +76,34 @@ public class LinkedList {
         return false;
     }
 
-    public void insertAfter(int key, int value){
-        Node current=this.head;
-        while (current!= null) {
-            if(current.value == key){
+    public void insertAfter(int key, int value) {
+        Node current = this.head;
+        while (current != null) {
+            if (current.value == key) {
                 Node nodeToBeAdded = new Node(value);
                 nodeToBeAdded.next = current.next;
                 current.next = nodeToBeAdded;
                 break;
             }
+            current = current.next;
+        }
+    }
+
+    public void remove(int key){
+        if(head.value == key){
+            this.removeHead();
+            return;
+        }
+        
+        Node current=this.head;
+        Node previous=null;
+        while (current!= null) {
+            if(current.value == key){
+                previous.next = current.next;
+                current.next=null;
+                break;
+            }
+            previous = current;
             current = current.next;
         }
     }
