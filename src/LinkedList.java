@@ -61,15 +61,28 @@ public class LinkedList {
         previous.next = null;
     }
 
-    public boolean search(int key){
+    public boolean search(int key) {
         Node current = this.head;
-        while (current!= null) {
-            if(current.value == key){
+        while (current != null) {
+            if (current.value == key) {
                 return true;
             }
             current = current.next;
         }
         return false;
+    }
+
+    public void insertAfter(int key, int value){
+        Node current=this.head;
+        while (current!= null) {
+            if(current.value == key){
+                Node nodeToBeAdded = new Node(value);
+                nodeToBeAdded.next = current.next;
+                current.next = nodeToBeAdded;
+                break;
+            }
+            current = current.next;
+        }
     }
 
     public void display() {

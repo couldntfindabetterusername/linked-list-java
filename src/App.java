@@ -37,5 +37,9 @@ public class App {
             System.out.println("Found 90");
         else
             System.out.println("Not found 90");
+
+        list.insertAfter(56, 100);
+        System.out.println("Inserting 100 after 56");
+        list.display();
     }
 }
