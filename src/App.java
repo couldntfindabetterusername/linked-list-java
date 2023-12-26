@@ -46,6 +46,7 @@ public class App {
         System.out.println("After removing 56");
         list.display();
 
+        System.out.println("********** Ordered list ***********");
         OrderedLinkedList orderedList = new OrderedLinkedList();
         orderedList.insert(25);
         orderedList.insert(10);
@@ -54,6 +55,7 @@ public class App {
         System.out.println("Displaying ordered linked list");
         orderedList.display();
 
+        System.out.println("********** Stack ***********");
         Stack stack = new Stack();
         stack.push(10);
         stack.push(20);
@@ -76,5 +78,30 @@ public class App {
             System.out.println("Stack is empty");
         else
             System.out.println("Stack is not empty");
+
+        System.out.println("********** Queue ***********");
+        Queue queue = new Queue();
+
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+        queue.enqueue(40);
+        queue.enqueue(50);
+
+        System.out.println("Displaying queue: ");
+        queue.display();
+
+        queue.dequeue();
+        queue.dequeue();
+
+        System.out.println("Displaying queue after 2 dequeues: ");
+        queue.display();
+
+        System.out.println("Front element of queue: " + queue.front());
+
+        if (queue.isEmpty())
+            System.out.println("Queue is empty");
+        else
+            System.out.println("Queue is not empty");
     }
 }

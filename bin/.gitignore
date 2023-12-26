@@ -3,5 +3,6 @@ Node.class
 LinkedList.class
 OrderedLinkedList.class
 Stack.class
+Queue.class
 
 .gitignore  
