@@ -5,7 +5,13 @@ public class LinkedList {
         this.head = null;
     }
 
-    public void append(int data) {
+    public void insertAtHead(int data) {
+        Node nodeToBeAdded = new Node(data);
+        nodeToBeAdded.next = this.head;
+        this.head = nodeToBeAdded;
+    }
+
+    public void insertAtTail(int data) {
         Node nodeToBeAdded = new Node(data);
 
         if (this.head == null) {
@@ -15,6 +21,7 @@ public class LinkedList {
             while (current.next != null) {
                 current = current.next;
             }
+            
             current.next = nodeToBeAdded;
         }
     }
